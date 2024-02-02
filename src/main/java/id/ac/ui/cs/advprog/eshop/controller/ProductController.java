@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import org.springframework.web.bind.annotation.PathVariable;
 
 @Controller
 @RequestMapping("/product")
@@ -35,4 +36,19 @@ public class ProductController {
         model.addAttribute("products", allProducts);
         return "listProduct";
     }
+
+    @GetMapping("/edit/{id}")
+    public String editProductPage(Model model, @PathVariable("id") String id) {
+        Product product = service.findProduct(Integer.valueOf(id));
+        model.addAttribute("product", product);
+        model.addAttribute("id", id);
+        return "editProduct";
+    }
+
+    @PutMapping("/edit/{id}")
+    public String editProductPut(@PathVariable("id") String id, @ModelAttribute Product product) {
+        service.editProduct(Integer.valueOf(id), product);
+        return "redirect:/product/list";
+    }
+
 }
