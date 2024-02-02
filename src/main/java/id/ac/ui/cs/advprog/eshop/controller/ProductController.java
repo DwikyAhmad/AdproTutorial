@@ -35,4 +35,10 @@ public class ProductController {
         model.addAttribute("products", allProducts);
         return "listProduct";
     }
+
+    @DeleteMapping("/{id}")
+    public String deleteProduct(@PathVariable("id") String id) {
+        service.deleteProduct(Integer.valueOf(id));
+        return "redirect:/product/list";
+    }
 }
