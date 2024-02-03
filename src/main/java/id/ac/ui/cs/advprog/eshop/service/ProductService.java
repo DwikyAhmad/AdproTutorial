@@ -12,4 +12,5 @@ public interface ProductService {
 
     public Product editProduct(int index, Product product);
 
+    public Product deleteProduct(int index);
 }

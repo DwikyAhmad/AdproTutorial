@@ -22,7 +22,6 @@
                     <tr>
                         <th scope="col">Product Name</th>
                         <th scope="col">Quantity</th>
-                        <th scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -35,6 +34,15 @@
                                 class="btn btn-primary text-light"
                                 >Edit</a
                             >
+                            <form
+                                th:action="@{'/product/' + ${iterStat.index}}"
+                                class="d-inline-block"
+                                th:method="delete"
+                            >
+                                <button class="btn btn-danger text-light">
+                                    Delete
+                                </button>
+                            </form>
                         </td>
                     </tr>
                 </tbody>
