@@ -19,4 +19,13 @@ public class ProductRepository {
     public Iterator<Product> findAll() {
         return productData.iterator();
     }
+
+    public Product findProduct(int index) {
+        return productData.get(index);
+    }
+
+    public Product editProduct(int index, Product product) {
+        return productData.set(index, product);
+    }
+
 }
