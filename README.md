@@ -1,8 +1,19 @@
-# Reflection 1
+# Modul 2
+
+Link Deployment: https://tutorial-1-dwikyahmad.koyeb.app/
+## Reflection 1
+Berdasarkan pada scanning code dari PMD, telah ditemukan issue pada codebase saya, yaitu menggunakan modifier public yang tidak diperlukan pada method-method di ProductService interface. hal ini mengurangi kualitas clean code saya, maka dari itu saya menghapus semua access modifier public di setiap method ProductService untuk menghilangkan issue tersebut. Pada dasarnya ProductService merupakan sebuah interface yang di mana semua methodnya dianggap memiliki aksesibilitas public. Maka dari itu, penggunaan access modifier public tidak diperlukan dan hanya akan menjadi redundant pada codebase dan sebaiknya dihapuskan. Dengan hal ini saya menjadi lebih teliti dalam memberikan sebuah akses modifier kepada method-method yang ada di sebuah class.
+
+## Reflection 2
+Ya, workflow yang telah diterapkan membuat setiap push pada branch akan melakukan proses building, unit testing, dan deployement secara otomatis. Hal ini akan membuat proses yang berulang-ulang dari menyiapkan sebuah environment untuk aplikasi, melakukan integrasi dan deployment sebagai tahap akhir dari proses releasenya sebuah version aplikasi. CI/CD workflows ini akan melakukan proses tersebut setiap adanya perubahan pada code di repository github. Implementasi ini juga sesuai dengan konsep CI/CD karena sudah menggunakan script automation untuk melakukan repetitive tasks. Maka dari itu implementasi tersebut sudah memenuhi kriteria dari Continuous Integration and Continuous Deployment.
+
+# Modul 1
+
+## Reflection 1
 
 Clean code yang telah diterapkan pada kode saya yaitu pada file `ProductController` function menggunakan nama yang meaningful dan hanya melakukan satu task saja, pada file-file lainnya, layout juga diberikan jarak blank lines untuk memisahkan deklarasi package, import dan setiap function, pada file `ProductService` code menerapkan abstraction dengan memisahkan abstract class dengan implementasinya dengan tujuan untuk menyembunyikan data yang tidak perlu dipaparkan dari object. Kode ini juga memastikan tidak ada kode yang di commented-out, dan tidak menggunakan comment yang tidak diperlukan. Pada secure coding practices, beberapa variabel menggunakan access modifier private yang memastikan variabel tidak bisa sembarangan untuk diakses. Adapun kesalahan pada kode yang perlu dikoreksi pada tahap exercise 1 ini ialah kurangnya keamanan dalam kode, pada kode ini belum adanya diimplementasikan fitur seperti validasi input, output data encoding, autentikasi, dan otorisasi untuk mengurangi resiko dari keamanan sebuah aplikasi.
 
-# Reflection 2
+## Reflection 2
 
 1. 
 - Setelah menulis unit test, saya merasa kode yang saya buat menjadi jauh lebih menarik dan lebih aman dari bug karena fungsi fungsi yang telah saya buat telah teruji implementasinya, dengan membuat unit test saya jadi lebih pasti tentang apa yang saya buat karena melakukan verifikasi dari bagian-bagian terkecil dalam aplikasi.
