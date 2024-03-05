@@ -21,7 +21,7 @@ import static org.mockito.Mockito.*;
 @ExtendWith(MockitoExtension.class)
 public class OrderServiceImplTest {
     @InjectMocks
-    OrderServiceImplTest orderService;
+    OrderServiceImpl orderService;
     @Mock
     OrderRepository orderRepository;
     List<Order> orders;
@@ -117,7 +117,7 @@ public class OrderServiceImplTest {
         Order order = orders.get(1);
         doReturn(orders).when(orderRepository).findAllByAuthor(order.getAuthor());
 
-        List<Order> results = orderService.findALlByAuthor(order.getAuthor());
+        List<Order> results = orderService.findAllByAuthor(order.getAuthor());
         for (Order result : results) {
             assertEquals(order.getAuthor(), result.getAuthor());
         }
