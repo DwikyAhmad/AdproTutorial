@@ -72,7 +72,7 @@ public class PaymentTest {
         Map<String, String> paymentData = new HashMap<>();
         paymentData.put("address", "LUBANG BUAYA");
 
-        Payment payment = new Payment("f74a8e87-31b4-4a11-b1fb-37b5114a61fd", "CashOnDelivery",
+        Payment payment = new Payment("f74a8e87-31b4-4a11-b1fb-37b5114a61fd", "CASH_ON_DELIVERY",
                 paymentData, this.order);
         assertEquals("REJECTED", payment.getStatus());
     }
@@ -83,7 +83,7 @@ public class PaymentTest {
         paymentData.put("bankName", "MANDIRI");
 
 
-        Payment payment = new Payment("f74a8e87-31b4-4a11-b1fb-37b5114a61fd", "BankTransfer",
+        Payment payment = new Payment("f74a8e87-31b4-4a11-b1fb-37b5114a61fd", "BANK_TRANSFER",
                 paymentData, this.order);
         assertEquals("REJECTED", payment.getStatus());
     }
