@@ -1,5 +1,11 @@
 Link Deployment: https://tutorial-1-dwikyahmad.koyeb.app/
 
+# Modul 4
+
+## Reflection 1
+1. Menurut saya TDD Flow ini sangat membantu bagi saya untuk mengembangkan code yang terstruktur dalam membuat sebuah aplikasi, dengan flow ini saya menjadi lebih berpikir kritis terhadap kodingan yang saya buat dengan memperhatikan kemungkinan output seperti happy path dan unhappy path test. TDD flow juga membuat saya merasa lebih yakin untuk melanjutkan sebuah fitur pada aplikasi karena kualitas dari kodenya sudah terjamin dengan testing coverage yang cukup baik. TDD flow ini juga menurut saya memberikan sebuah dokumentasi tentang bagaimana cara aplikasi ini bekerja, dengan hal ini developer lain akan mudah membaca kode kita dan akan mempermudah kolaborasi kedepannya. TDD flow juga memberikan immediate feedback yang apabila terjadi kegagalan dalam suatu fitur, maka kita sebagai developer akan lebih mendeteksi masalahnya dan akan membuat proses development menjadi lebih cepat dan efisien.
+2. Menurut saya, test yang telah diterapkan pada tutorial ini telah mengikuti prinsip F.I.R.S.T, setiap test telah menggunakan algoritma yang sederhana sehingga berjalan dengan cepat tanpa mengganggu workflow. Test yang telah dibuat juga bersifat independent, terlihat dari test yang masing-masing tidak bergantung terhadap test case lainnya. Pada test yang telah dibuat juga menggunakan assertion seperti AssertEqual dan AssertNull yang memenuhi sifat Self-validating. Pada tutorial ini juga memprioritaskan pembuatan test berdasarkan happy test dan unhappy test, yang didesain untuk mengcover semua kemungkinan yang akan terjadi dan didesain sebelum implementasi coding dilakukan.
+
 # Modul 3
 
 ## Reflection 1
