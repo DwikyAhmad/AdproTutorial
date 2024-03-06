@@ -1,6 +1,7 @@
 package id.ac.ui.cs.advprog.eshop.model;
 
 import id.ac.ui.cs.advprog.eshop.enums.PaymentMethod;
+import id.ac.ui.cs.advprog.eshop.enums.PaymentStatus;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -33,6 +34,14 @@ public class Payment {
         this.order = order;
         this.paymentData = paymentData;
 
+    }
+
+    public void setStatus(String status) {
+        if (!PaymentStatus.contains(status)) {
+            throw new IllegalArgumentException();
+        } else {
+            this.status = status;
+        }
     }
 
     public boolean isMethod(String method) {
