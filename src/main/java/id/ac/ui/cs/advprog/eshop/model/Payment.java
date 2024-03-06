@@ -70,14 +70,6 @@ public class Payment {
                     && (deliveryFeeValue != null && !deliveryFeeValue.isEmpty());
         }
 
-        if (method.equals("BANK_TRANSFER")) {
-            String bankNameValue = paymentData.get("bankName");
-            String referenceCodeValue = paymentData.get("referenceCode");
-
-            return (bankNameValue != null && !bankNameValue.isEmpty())
-                    && (referenceCodeValue != null && !referenceCodeValue.isEmpty());
-        }
-
         return false;
     }
 }

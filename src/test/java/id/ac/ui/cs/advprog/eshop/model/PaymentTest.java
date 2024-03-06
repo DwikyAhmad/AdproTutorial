@@ -84,7 +84,7 @@ public class PaymentTest {
         paymentData.put("bankName", "MANDIRI");
 
 
-        Payment payment = new Payment("f74a8e87-31b4-4a11-b1fb-37b5114a61fd", "BANK_TRANSFER",
+        Payment payment = new PaymentBank("f74a8e87-31b4-4a11-b1fb-37b5114a61fd", "BANK_TRANSFER",
                 paymentData, this.order);
         assertEquals("REJECTED", payment.getStatus());
     }
