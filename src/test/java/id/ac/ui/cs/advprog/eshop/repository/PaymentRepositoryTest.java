@@ -15,12 +15,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class PaymentRepositoryTest {
     PaymentRepository paymentRepository;
-    private List<Product> products;
+    List<Product> products;
     List<Payment> payments;
     Order order;
     @BeforeEach
     void setUp() {
         this.products = new ArrayList<>();
+        this.payments = new ArrayList<>();
+        this.paymentRepository = new PaymentRepository();
         Product product1 = new Product();
         product1.setProductId("eb558e9f-1c39-460e-8860-71af6af63bd6");
         product1.setProductName("Sampo Cap Bambang");
@@ -44,6 +46,7 @@ public class PaymentRepositoryTest {
 
         Payment payment2 = new Payment("f74a8e87-31b4-4a11-b1fb-37b5114a61fe", "VOUCHER",
                 paymentData, this.order);
+        this.payments.add(payment2);
     }
 
     @Test
