@@ -1,13 +1,13 @@
 package id.ac.ui.cs.advprog.eshop.model;
 
+import id.ac.ui.cs.advprog.eshop.enums.PaymentMethod;
 import lombok.Getter;
+import lombok.Setter;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Map;
 
 @Getter
+@Setter
 public class Payment {
     private String id;
     private String method;
@@ -36,12 +36,7 @@ public class Payment {
     }
 
     public boolean isMethod(String method) {
-        String[] methodList = {"VOUCHER", "CASH_ON_DELIVERY", "BANK_TRANSFER"};
-        if (Arrays.stream(methodList).noneMatch(item -> (item.equals(method)))) {
-            return false;
-        } else {
-            return true;
-        }
+        return PaymentMethod.contains(method);
     }
 
     public boolean isPaymentDataValid(Map<String, String> paymentData) {
